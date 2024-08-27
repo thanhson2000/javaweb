@@ -19,7 +19,7 @@
     <form method="POST">
         <div class="mb-3">
             <label for="userId" class="form-label">Id</label>
-            <input type="number" class="form-control" id="userId" value="${user.getId()}" name="id">
+            <input type="number" class="form-control" id="userId" value="${user.getId()}" name="id" readonly="readonly">
         </div>
         <div class="mb-3">
             <label for="userFullName" class="form-label">Name</label>

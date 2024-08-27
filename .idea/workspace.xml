@@ -10,16 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8c700b9-b922-4d80-8cae-cd67cdd55227" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/DB/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/AddServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/DeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/ListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/UpdateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/update.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +201,7 @@
       <workItem from="1723467399064" duration="609000" />
       <workItem from="1724153072553" duration="44500000" />
       <workItem from="1724643657422" duration="3549000" />
-      <workItem from="1724760228197" duration="5618000" />
+      <workItem from="1724760228197" duration="5939000" />
     </task>
     <servers />
   </component>
