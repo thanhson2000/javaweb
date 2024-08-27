@@ -20,7 +20,7 @@ public class UpdateServlet extends HttpServlet {
         if(req.getParameter("id")!=null) {
             int id = Integer.parseInt(req.getParameter("id"));
             ProductsDao pDao = new ProductsDao();
-            Product product = pDao.getById(id);
+            Product product = pDao.get(id);
             req.setAttribute("product", product);
         }
             CategoriesDAO cDao = new CategoriesDAO();

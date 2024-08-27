@@ -8,10 +8,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class UserDAO extends DB{
+public class UserDAO extends DB implements IDAO<User>{
     public UserDAO () {
         connect();
     }
+
+    @Override
     public ArrayList<User> list(){
         ArrayList<User> userList = new ArrayList<>();
         try{
@@ -34,6 +36,7 @@ public class UserDAO extends DB{
         return null;
     }
 
+    @Override
     public User get(int id){
         try{
             User user = new User();
@@ -53,6 +56,7 @@ public class UserDAO extends DB{
         return null;
     }
 
+    @Override
     public User add(User user){
         try{
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO users(full_name,email,password) VALUES (?,?,?)");
@@ -70,7 +74,8 @@ public class UserDAO extends DB{
         return null;
     }
 
-    private int getLastId(){
+    @Override
+    public int getLastId(){
         try{
             String sql ="SELECT MAX(id) FROM users";
             ResultSet resultSet = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery(sql);
@@ -83,6 +88,7 @@ public class UserDAO extends DB{
         return 0;
     }
 
+    @Override
     public User update(int id, User user){
         try{
             PreparedStatement preparedStatement = connection.prepareStatement("UPDATE users SET full_name = ?, email = ? , password = ? WHERE id = ?");
@@ -98,6 +104,8 @@ public class UserDAO extends DB{
         return null;
     }
 
+
+    @Override
     public boolean remove(int id){
         try{
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM users WHERE id = ?");

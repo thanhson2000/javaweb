@@ -8,11 +8,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class ProductsDao extends DB{
+public class ProductsDao extends DB implements IDAO<Product>{
     public ProductsDao(){
         connect();
     }
 
+    @Override
     public ArrayList<Product> list(){
         ArrayList<Product> productsList = new ArrayList<>();
         try{
@@ -39,7 +40,8 @@ public class ProductsDao extends DB{
         return dao.get(id);
     }
 
-    public Product getById(int id){
+    @Override
+    public Product get(int id){
         Product product = new Product();
         try{
             String sql = "SELECT * FROM products WHERE id="+id;
@@ -59,6 +61,7 @@ public class ProductsDao extends DB{
         return null;
     }
 
+    @Override
     public Product add(Product product){
         try{
             PreparedStatement preparedStatement =
@@ -70,7 +73,7 @@ public class ProductsDao extends DB{
 
             preparedStatement.executeUpdate();
 
-            return getById(getLastId());
+            return get(getLastId());
         }catch ( SQLException e){
             e.printStackTrace();
         }
@@ -78,7 +81,8 @@ public class ProductsDao extends DB{
         return null;
     }
 
-    private int getLastId(){
+    @Override
+    public int getLastId(){
         try{
             String sql = "SELECT MAX(id) FROM products";
             ResultSet resultSet = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery(sql);
@@ -92,6 +96,7 @@ public class ProductsDao extends DB{
         return -1;
     }
 
+    @Override
     public boolean remove(int id){
         try{
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM products WHERE id=?");
@@ -106,6 +111,7 @@ public class ProductsDao extends DB{
     }
 
 
+    @Override
     public Product update(int id, Product product){
         try{
             PreparedStatement preparedStatement =
@@ -117,7 +123,7 @@ public class ProductsDao extends DB{
 
             preparedStatement.executeUpdate();
 
-            return getById(id);
+            return get(id);
         }catch ( SQLException e){
             e.printStackTrace();
         }

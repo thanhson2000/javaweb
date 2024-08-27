@@ -1,18 +1,20 @@
 package com.thayluantutor.DB;
 
 import com.thayluantutor.models.Category;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class CategoriesDAO extends DB{
+public class CategoriesDAO extends DB implements IDAO<Category>{
     public CategoriesDAO() {
         connect();
     }
 
     // get list of all categories
+    @Override
     public ArrayList<Category> list(){
         ArrayList<Category> categoriesList = new ArrayList<>();
         try {
@@ -31,8 +33,10 @@ public class CategoriesDAO extends DB{
         return null;
     }
 
+
     // add category in categories DBa
-    public Category add(Category category){
+    @Override
+    public Category add(@NotNull Category category){
         try{
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO categories(name) VALUES (?)");
             preparedStatement.setString(1,category.getName());
@@ -44,7 +48,8 @@ public class CategoriesDAO extends DB{
         return null;
     }
 
-    private int getLastId(){
+    @Override
+    public int getLastId(){
         try{
             String sql ="SELECT MAX(id) FROM categories";
             ResultSet resultSet = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery(sql);
@@ -58,6 +63,7 @@ public class CategoriesDAO extends DB{
     }
 
     // get category by id
+    @Override
     public Category get(int id){
         try{
             String sql = "SELECT * FROM categories WHERE id = "+id;
@@ -76,7 +82,8 @@ public class CategoriesDAO extends DB{
     }
 
     // update category according id
-    public Category update(int id, Category category){
+    @Override
+    public Category update(int id, @org.jetbrains.annotations.NotNull Category category){
         try{
             PreparedStatement preparedStatement = connection.prepareStatement("UPDATE categories SET name = ? WHERE id = ?");
             preparedStatement.setString(1, category.getName());
@@ -91,6 +98,7 @@ public class CategoriesDAO extends DB{
 
 
     // remove category according id
+    @Override
     public boolean remove(int id){
         try{
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM categories WHERE id = ?");
