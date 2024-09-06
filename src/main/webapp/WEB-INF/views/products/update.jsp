@@ -19,7 +19,7 @@
     <form method="POST">
         <div class="mb-3">
             <label for="productId" class="form-label">Id</label>
-            <input type="number" class="form-control" id="productId" value="${product.getId()}" name="id">
+            <input type="number" class="form-control" id="productId" value="${product.getId()}" name="id" readonly>
         </div>
         <div class="mb-3">
             <label for="productName" class="form-label">Name</label>
@@ -27,13 +27,17 @@
         </div>
         <div class="mb-3">
             <label for="productPrice" class="form-label">Price</label>
-            <input type="number" class="form-control" id="productPrice"  name="price">
+            <input type="number" class="form-control" id="productPrice" value="${product.getPrice()}" name="price">
+        </div>
+        <div class="mb-3">
+            <label for="productPath" class="form-label">Path</label>
+            <input type="text" class="form-control" id="productPath" value="${product.getPath()}" name="path">
         </div>
         <div class="mb-3">
             <select name="categoryId">
                 <option>---Select---</option>
                 <c:forEach items="${categories}" var="category">
-                    <option value="${category.getId()}">
+                    <option value="${category.getId()}" selected>
                         <c:out value="${category.getName()}"/>
                     </option>
                 </c:forEach>

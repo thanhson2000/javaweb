@@ -25,6 +25,11 @@
         <input type="number" class="form-control" id="productPrice" name="price">
     </div>
 
+    <div class="mb-3">
+        <label for="productPath" class="form-label">Path</label>
+        <input type="text" class="form-control" id="productPath" name="path">
+    </div>
+
     <select class="form-select" aria-label="Default select example" name="categoryId">
         <option selected>Open this select menu</option>
         <c:forEach var="category" items="${categories}" >

@@ -1,6 +1,6 @@
 package com.thayluantutor.controllers.products;
 
-import com.thayluantutor.DB.ProductsDao;
+import com.thayluantutor.DB.ProductsDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,7 +14,7 @@ public class DeleteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("id")!= null) {
-            ProductsDao dao = new ProductsDao();
+            ProductsDAO dao = new ProductsDAO();
             dao.remove(Integer.parseInt(req.getParameter("id")));
         }
             resp.sendRedirect(req.getContextPath()+"/product_list");

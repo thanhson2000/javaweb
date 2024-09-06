@@ -8,4 +8,5 @@ public class Product {
     private String name;
     private float price;
     private Category category;
+    private String path;
 }

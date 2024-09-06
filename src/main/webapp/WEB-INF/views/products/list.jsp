@@ -28,6 +28,7 @@
         <th scope="col">Name</th>
         <th scope="col">Price</th>
         <th scope="col">Category</th>
+        <th scope="col">Path</th>
         <th scope="col">Thao Tac</th>
     </tr>
     </thead>
@@ -48,6 +49,9 @@
                     [<c:out value="${product.getCategory().getId()}"/>]
                     <c:out value="${product.getCategory().getName()}"/>
                 </span>
+            </td>
+            <td>
+                <c:out value="${product.getPath()}"/>
             </td>
             <td>
                 <a href="<%=request.getContextPath()%>/products_update?id=<c:out value="${product.getId()}"/> " class="btn btn-primary">Edit</a>

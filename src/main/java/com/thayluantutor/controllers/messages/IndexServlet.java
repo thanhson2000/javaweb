@@ -1,4 +1,4 @@
-package thanhson.javaweb.example.demoproject;
+package com.thayluantutor.controllers.messages;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,12 +8,16 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "aboutMe",value = "/aboutme")
-public class AboutMe extends HttpServlet {
+@WebServlet(name = "messageLanguage",urlPatterns = "/")
+public class IndexServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
-        resp.getWriter().write("<ul>I am Thanh Son</ul>");
+        String lang = req.getParameter("lang");
+        if(lang == null){
+            lang="vi_VN";
+        }
 
+        req.getSession().setAttribute("lang",lang);
+        resp.sendRedirect(req.getContextPath()+"/message.jsp");
     }
 }

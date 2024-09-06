@@ -1,7 +1,7 @@
 package com.thayluantutor.controllers.products;
 
 import com.thayluantutor.DB.CategoriesDAO;
-import com.thayluantutor.DB.ProductsDao;
+import com.thayluantutor.DB.ProductsDAO;
 import com.thayluantutor.models.Category;
 import com.thayluantutor.models.Product;
 import jakarta.servlet.ServletException;
@@ -19,7 +19,7 @@ public class UpdateServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("id")!=null) {
             int id = Integer.parseInt(req.getParameter("id"));
-            ProductsDao pDao = new ProductsDao();
+            ProductsDAO pDao = new ProductsDAO();
             Product product = pDao.get(id);
             req.setAttribute("product", product);
         }
@@ -38,8 +38,9 @@ public class UpdateServlet extends HttpServlet {
         product.setName(req.getParameter("name"));
         product.setPrice(Float.parseFloat(req.getParameter("price")));
         product.setCategory(cDao.get(Integer.parseInt(req.getParameter("categoryId"))));
+        product.setPath(req.getParameter("path"));
 
-        ProductsDao pDao = new ProductsDao();
+        ProductsDAO pDao = new ProductsDAO();
         pDao.update(Integer.parseInt(req.getParameter("id")),product);
 
         resp.sendRedirect(req.getContextPath()+"/products_list");

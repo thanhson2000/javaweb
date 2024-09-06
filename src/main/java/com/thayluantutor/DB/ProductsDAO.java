@@ -8,8 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class ProductsDao extends DB implements IDAO<Product>{
-    public ProductsDao(){
+public class ProductsDAO extends DB implements IDAO<Product>{
+    public ProductsDAO(){
         connect();
     }
 
@@ -25,6 +25,7 @@ public class ProductsDao extends DB implements IDAO<Product>{
                 product.setName(resultSet.getString("name"));
                 product.setPrice(resultSet.getFloat("price"));
                 product.setCategory(getCategoryById(resultSet.getInt("category_id")));
+                product.setPath(resultSet.getString("path"));
 
                 productsList.add(product);
             }
@@ -51,6 +52,7 @@ public class ProductsDao extends DB implements IDAO<Product>{
                 product.setName(resultSet.getString("name"));
                 product.setPrice(resultSet.getFloat("price"));
                 product.setCategory(getCategoryById(resultSet.getInt("category_id")));
+                product.setPath(resultSet.getString("path"));
 
             }
             return product;
@@ -66,10 +68,11 @@ public class ProductsDao extends DB implements IDAO<Product>{
         try{
             PreparedStatement preparedStatement =
                     connection.prepareStatement
-                            ("INSERT INTO products(name,price,category_id) VALUES (?,?,?)");
+                            ("INSERT INTO products(name,price,category_id,path) VALUES (?,?,?,?)");
             preparedStatement.setString(1, product.getName());
             preparedStatement.setFloat(2,product.getPrice());
             preparedStatement.setInt(3,product.getCategory().getId());
+            preparedStatement.setString(4, product.getPath());
 
             preparedStatement.executeUpdate();
 
@@ -115,11 +118,12 @@ public class ProductsDao extends DB implements IDAO<Product>{
     public Product update(int id, Product product){
         try{
             PreparedStatement preparedStatement =
-                    connection.prepareStatement("UPDATE products SET name= ? , price =? , category_id = ? WHERE id = ? ;");
+                    connection.prepareStatement("UPDATE products SET name= ? , price =? , category_id = ? , path = ? WHERE id = ? ;");
             preparedStatement.setString(1, product.getName());
             preparedStatement.setFloat(2,product.getPrice());
             preparedStatement.setInt(3,product.getCategory().getId());
-            preparedStatement.setInt(4,id);
+            preparedStatement.setString(4, product.getPath());
+            preparedStatement.setInt(5,id);
 
             preparedStatement.executeUpdate();
 

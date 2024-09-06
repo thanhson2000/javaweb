@@ -1,9 +1,6 @@
 package com.thayluantutor.controllers.users;
 
-import com.thayluantutor.DB.CategoriesDAO;
-import com.thayluantutor.DB.ProductsDao;
 import com.thayluantutor.DB.UserDAO;
-import com.thayluantutor.models.Product;
 import com.thayluantutor.models.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
