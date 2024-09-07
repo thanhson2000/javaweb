@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
+<div>
+    <h5>User: <c:out value="${user.getFull_name()}"/> </h5>
+    <h5>Email: <c:out value="${user.getEmail()}"/> </h5>
+</div>
 <div class="container">
     <div class="row">
         <c:forEach items="${products}" var="product">

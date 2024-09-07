@@ -10,39 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8c700b9-b922-4d80-8cae-cd67cdd55227" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/DB/OrdersDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/messages/IndexServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/shopping_cart/AddServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/shopping_cart/CartServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/shopping_cart/CheckoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/shopping_cart/ListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/shopping_cart/QuantityPlusServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/shopping_cart/QuantitySubtractServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/shopping_cart/RemoveServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/models/CartItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/models/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/message.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/message_vi_VN.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/message_zh_CN.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/message_zh_TW.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shopping_cart/cart.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shopping_cart/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/message.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Run.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/DB/LoginDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thayluantutor/DB/ProductsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/DB/ProductsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/products/AddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/products/AddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/products/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/products/DeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/products/ListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/products/ListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/products/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/products/UpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/DeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/controllers/users/UpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thayluantutor/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thayluantutor/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thanhson/javaweb/example/demoproject/AboutMe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thanhson/javaweb/example/demoproject/AboutMe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/products/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shopping_cart/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shopping_cart/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +81,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Run (1)">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 11.0.0-M24">
     <configuration name="ConnectDBA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.thayluantutor.DB.ConnectDBA" />
       <module name="DemoProject" />
@@ -260,7 +232,7 @@
       <workItem from="1724643657422" duration="3549000" />
       <workItem from="1724760228197" duration="18536000" />
       <workItem from="1724940296314" duration="1365000" />
-      <workItem from="1725187169836" duration="51508000" />
+      <workItem from="1725187169836" duration="59285000" />
     </task>
     <servers />
   </component>
